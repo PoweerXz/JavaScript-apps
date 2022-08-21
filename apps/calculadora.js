@@ -1,9 +1,29 @@
+function multiplicacao(valor1, valor2) {
+    let resultado = valor1 * valor2;
+    return resultado
+}
+
+function divisao(valor1, valor2) {
+    let resultado = valor1 / valor2;
+    return resultado
+}
+
+function subtracao(valor1, valor2) {
+    let resultado = valor1 - valor2;
+    return resultado
+}    
+
+function soma(valor1, valor2) {
+    let resultado = valor1 + valor2; 
+    return resultado 
+}
+
 function calculadora(valor1, valor2, operador) {
     let operadores = {
-    multiplicao: '*',
-    divisao: '/',
-    subtracao: '-',
-    soma: '+',
+        multiplicao: '*',
+        divisao: '/',
+        subtracao: '-',
+        soma: '+',
     };
 
     let mensagens = {
@@ -18,35 +38,25 @@ function calculadora(valor1, valor2, operador) {
     if (operador == operadores.multiplicao) {
 
         console.log(mensagens.multiplicacao, valor1, valor2)
-        let resultadoMultiplicacao = valor1 * valor2
+        let resultadoadoMultiplicacao = multiplicacao(valor1, valor2);
         
-        console.log(resultadoMultiplicacao)
+        console.log(resultadoadoMultiplicacao)
     
     } else if (operador == operadores.divisao) {
-    
-        if (valor1 <= 0) {
-            console.log(mensagens.erro)
-    
-        } else if (valor2 <= 0) {
-            console.log(mensagens.erro)
-        } else {
-            console.log(mensagens.divisao, valor1, valor2)
-            
-            let resultadoDivisao = valor1 / valor2
-            console.log(resultadoDivisao)
-        }
+       console.log(mensagens.divisao, valor1, valor2)
+       let resultadoadoDivisao = divisao(valor1, valor2);
+       console.log(resultadoadoDivisao)
+
+
     } else if (operador == operadores.subtracao) {
         console.log(mensagens.subtracao, valor1, valor2)
-        
-        let resultadoSubtracao = valor1 - valor2
-        
-        console.log(resultadoSubtracao)
+        let resultadoadoSubtracao = subtracao(valor1, valor2);
+        console.log(resultadoadoSubtracao)
+    
     } else if (operador == operadores.soma) {
         console.log(mensagens.soma, valor1, valor2)
-     
-        let resultadoSoma = valor1 + valor2
-     
-        console.log(resultadoSoma)
+        let resultadoadoSoma = soma(valor1, valor2);
+        console.log(resultadoadoSoma)
     } else {
         console.log(mensagens.erro)
     }
